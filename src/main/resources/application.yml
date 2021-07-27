@@ -5,9 +5,19 @@ server:
     encoding:
       charset: utf-8
       enabled: true
+    jsp:
+      init-parameters:
+        development: true
 
 spring:
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+
+
