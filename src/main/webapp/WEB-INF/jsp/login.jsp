@@ -17,12 +17,13 @@
     <div class="auth">
         <h1>로그인</h1>
         <div class="form">
-            <form action="" method="post">
-                <p><input type="text" name="id" placeholder="아이디를 입력해주세요"></p>
+            <form action="/auth/login" method="post">
+                <p><input type="text" name="userId" placeholder="아이디를 입력해주세요"></p>
                 <p><input type="text" name="password" placeholder="비밀번호를 입력해주세요"></p>
                 <button type="submit">로그인</button>
             </form>
         </div>
+        <p class="error">${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</p>
         <div class="joinBtn"><a href="/join">회원가입</a></div>
         <div>
             <span>소셜로그인</span>

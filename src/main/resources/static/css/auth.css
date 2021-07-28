@@ -31,6 +31,13 @@ h1 {
     border:1px solid #d6d6d6;
     cursor:pointer;
 }
+.error {
+    width:300px;
+    font-size:12px;
+    line-height:1.4em;
+    padding: 10px 0;
+    color: #d0392B;
+}
 .joinBtn {
     width: 300px;
     height: 35px;
