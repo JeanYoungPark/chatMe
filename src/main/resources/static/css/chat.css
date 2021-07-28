@@ -1,0 +1,81 @@
+.chat {
+    background-color:#AED6F1;
+    border:1px solid #bbb;
+}
+#header {
+    display:flex;
+    justify-content: space-between;
+    padding:20px 10px;
+    background-color:#A9CCE3;
+    align-items: center;
+}
+#header .logout {
+    font-size:14px;
+}
+#msg{
+    height:130px;
+    background-color:#fff;
+    padding:10px;
+    box-sizing: border-box;
+}
+#msg .inputTable {
+    width:100%;
+    height:100%;
+    display:flex;
+}
+#chatting {
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    height: 500px;
+    padding: 10px;
+    overflow: auto;
+    box-sizing: border-box;
+}
+#chatting p {
+    font-size:14px;
+    color:#333;
+    margin-bottom: 10px;
+}
+#chatting .me {
+    text-align:right;
+}
+#chatting .others {
+    display :flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align:left;
+}
+#chatting .me .txt {
+    display:inline-block;
+    padding:5px 10px;
+    line-height: 28px;
+    border-radius: 10px;
+    background:yellow;
+}
+#chatting .others .txt {
+    padding:5px 10px;
+    line-height: 28px;
+    border-radius: 20px;
+    background:#bbbbbb;
+}
+#chatting .others .nick {
+    margin-left:5px;
+    line-height:28px;
+    font-weight:600;
+}
+#sendBtn {
+    width: 55px;
+    height: 30px;
+    margin-left:10px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border:1px solid #ddd;
+}
+textarea {
+    -webkit-appearance: none;
+    width:calc( 100% - 55px );
+    height:100%;
+    border:0;
+    resize: none;
+}
