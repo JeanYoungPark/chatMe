@@ -1,11 +1,18 @@
 package com.example.chatme.controller;
 
+import com.example.chatme.domain.user.User;
+import com.example.chatme.dto.user.userDtoPo;
+import com.example.chatme.service.AuthService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RequiredArgsConstructor
+@Controller
 public class AuthController {
+
+    private final AuthService authService;
 
     @GetMapping("/")
     public String login(){
@@ -17,14 +24,12 @@ public class AuthController {
         return "join";
     }
 
-    @PostMapping("/auth/signin")
-    public void signIn(){
-        //로그인
-    }
-
     @PostMapping("/auth/join")
-    public void joinForm(){
-        //회원가입
+    public String joinForm(userDtoPo userDtoPo){
+        User user = userDtoPo.toEntity();
+        authService.join(user);
+
+        return "/login";
     }
 
 }
