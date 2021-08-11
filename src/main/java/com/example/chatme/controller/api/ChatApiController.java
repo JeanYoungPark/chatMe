@@ -19,7 +19,6 @@ public class ChatApiController {
     @PostMapping("/create/room")
     public Room create(@RequestBody RoomDtoPo roomDtoPo){
         Room room = roomService.save(roomDtoPo);
-        System.out.println(room);
         return room;
     }
 

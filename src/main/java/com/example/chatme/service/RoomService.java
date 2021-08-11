@@ -3,6 +3,7 @@ package com.example.chatme.service;
 import com.example.chatme.domain.chatting.Room;
 import com.example.chatme.domain.chatting.RoomRepository;
 import com.example.chatme.dto.chatting.RoomDtoPo;
+import com.example.chatme.handler.ex.CustomValidationException;
 import com.example.chatme.mapper.RoomMapperPotoEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
@@ -31,7 +32,7 @@ public class RoomService {
     }
 
     public Room findById(long roomNumber){
-        Room room = roomRepository.findById(roomNumber).orElseThrow(()-> new IllegalArgumentException("존재하지 않는 방입니다."));
+        Room room = roomRepository.findById(roomNumber).orElseThrow(()-> new CustomValidationException("존재하지 않는 방입니다."));
         return room;
     }
 
