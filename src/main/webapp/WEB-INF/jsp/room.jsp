@@ -21,14 +21,20 @@
             <span class="toggleBtn">+</span>
         </div>
         <div class="roomContainer">
-            <table id="roomList"></table>
+            <table id="roomList">
+                <colgroup>
+                    <col>
+                    <col width="20%">
+                </colgroup>
+                <tbody></tbody>
+            </table>
         </div>
         <div class="popup">
             <div class="bg">
                 <span class="close">x</span>
                 <span>방 제목</span>
                 <span><input type="text" name="roomName" id="roomName"></span>
-                <span><button id="createToom">방 만들기</button></span>
+                <span><button id="createRoom">방 만들기</button></span>
             </div>
         </div>
     </div>

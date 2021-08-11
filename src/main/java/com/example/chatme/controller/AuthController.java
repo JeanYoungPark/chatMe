@@ -1,7 +1,8 @@
 package com.example.chatme.controller;
 
 import com.example.chatme.domain.user.User;
-import com.example.chatme.dto.user.userDtoPo;
+import com.example.chatme.dto.user.UserDtoPo;
+import com.example.chatme.mapper.UserMapperPotoEntity;
 import com.example.chatme.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -25,9 +26,8 @@ public class AuthController {
     }
 
     @PostMapping("/auth/join")
-    public String joinForm(userDtoPo userDtoPo){
-        User user = userDtoPo.toEntity();
-        authService.join(user);
+    public String joinForm(UserDtoPo userDtoPo){
+        authService.join(userDtoPo);
 
         return "/login";
     }

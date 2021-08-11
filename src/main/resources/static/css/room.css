@@ -46,10 +46,14 @@
     position:relative;
     border:1px solid #bbb;
 }
+
+#roomList {
+    width:100%;
+}
+
 #header {
     min-width:300px;
     max-width:500px;
-    height:130px;
     display:flex;
     justify-content:space-between;
     position:relative;
