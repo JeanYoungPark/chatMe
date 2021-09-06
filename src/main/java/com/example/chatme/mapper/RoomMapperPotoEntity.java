@@ -11,7 +11,7 @@ public interface RoomMapperPotoEntity {
 
     RoomMapperPotoEntity INSTANCE = Mappers.getMapper(RoomMapperPotoEntity.class);
 
-    @Mapping(target="id", constant = "0L")
+    @Mapping(target="id", ignore = true)
     Room convert(RoomDtoPo roomDtoPo);
 
 }

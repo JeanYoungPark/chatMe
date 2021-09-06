@@ -10,6 +10,6 @@ import org.mapstruct.factory.Mappers;
 public interface UserMapperPotoEntity {
     UserMapperPotoEntity INSTANCE = Mappers.getMapper(UserMapperPotoEntity.class);
 
-    @Mapping(target = "id", constant = "0L")
+    @Mapping(target = "id", ignore = true)
     User convert(UserDtoPo userDtoPo);
 }
