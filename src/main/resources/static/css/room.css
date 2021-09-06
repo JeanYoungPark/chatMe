@@ -51,6 +51,11 @@
     width:100%;
 }
 
+#roomList tr {
+    display:flex;
+    justify-content: space-between;
+}
+
 #header {
     min-width:300px;
     max-width:500px;
