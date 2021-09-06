@@ -62,7 +62,7 @@
 #header .toggleBtn {
     border:0;
     background:none;
-    padding:0;width:20px;height:20px;
+    padding:0;
     cursor:pointer;
 }
 #header h1 {
