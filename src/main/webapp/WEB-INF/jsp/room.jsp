@@ -22,10 +22,6 @@
         </div>
         <div class="roomContainer">
             <table id="roomList">
-                <colgroup>
-                    <col>
-                    <col width="20%">
-                </colgroup>
                 <tbody></tbody>
             </table>
         </div>
