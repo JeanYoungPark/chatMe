@@ -22,13 +22,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.authorizeRequests()
-                .antMatchers("/chat").authenticated()
+                .antMatchers("/chat","/room").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/")
                 .loginProcessingUrl("/auth/login")
-                .defaultSuccessUrl("/chat")
+                .defaultSuccessUrl("/room")
                 .usernameParameter("userId");
     }
 }

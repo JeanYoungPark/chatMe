@@ -27,8 +27,11 @@ public class ChatController {
     }
 
     @GetMapping("/move/room")
-    public String chating(long roomNumber){
+    public String chating(long roomNumber, Model model, @AuthenticationPrincipal PrincipalDetails principalDetails){
         roomService.findById(roomNumber);
+
+        model.addAttribute("user", principalDetails.getUser());
+        model.addAttribute("roomNumber", roomNumber);
         return "chat";
     }
 }

@@ -17,6 +17,7 @@
 <div id="container" class="container">
     <div class="chat">
         <div id="header">
+            <input id="roomNumber" name="roomNumber" type="hidden" value="${roomNumber}">
             <h1>
                 <span>실시간 채팅 ( ${user.nickName} )</span>
             </h1>

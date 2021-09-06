@@ -1,7 +1,7 @@
 var ws;
 
 function wsOpen(){
-    ws = new WebSocket("ws://" + location.host + "/chating");
+    ws = new WebSocket("ws://" + location.host + "/chating/"+$("#roomNumber").val());
     wsEvt();
 }
 
@@ -46,6 +46,7 @@ function wsEvt() {
 function send() {
     var option = {
         type: "message",
+        roomNumber:$("#roomNumber").val(),
         sessionId : $("#sessionId").val(),
         userId : $("#userId").val(),
         nickName : $("#nickName").val(),
