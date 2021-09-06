@@ -44,13 +44,20 @@ function createChattingRoom(res){
     if(res != null){
         var tag = "";
 
-        $.each(res,function(idx, data){
-            var roomName = data.roomName;
-            var roomNumber = data.id;
-            tag += `<tr><td>${roomName}</td><td><button type="button" onclick="goRoom(${roomNumber})">참여</button></td></td></tr>`;
-        });
+        if(res.length > 1) {
+            $.each(res,function(idx, data){
+                var roomName = data.roomName;
+                var roomNumber = data.id;
+                tag += `<tr><td>${roomName}</td><td><button type="button" onclick="goRoom(${roomNumber})">참여</button></td></td></tr>`;
+            });
 
-        $('#roomList tbody').empty().append(tag);
+            $('#roomList tbody').empty().append(tag);
+        }else {
+            tag += `<tr><td>${res.roomName}</td><td><button type="button" onclick="goRoom(${res.roomNumber})">참여</button></td></td></tr>`;
+
+            $('#roomList tbody').prepend(tag);
+        }
+
     }
 }
 
