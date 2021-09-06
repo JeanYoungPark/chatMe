@@ -20,7 +20,7 @@
             <form action="/auth/join" method="post">
                 <p><input type="text" name="userId" placeholder="아이디를 입력해주세요"></p>
                 <p><input type="password" name="password" placeholder="비밀번호를 입력해주세요"></p>
-                <p><input type="password" name="nickName" placeholder="닉네임을 입력해주세요"></p>
+                <p><input name="nickName" placeholder="닉네임을 입력해주세요"></p>
                 <button type="submit">확인</button>
             </form>
         </div>
